@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body button {
+            cursor: pointer;
+        }
+
+        .main {
+            display: flex;
+            margin: 20px;
+            justify-content: center;
+        }
+
+        .item-cont {
+            height: fit-content;
+            max-width: 40em;
+            width: 40em;
+            padding: 14px;
+            box-shadow: inset 0 0 10px gray;
+        }
+
+        .items {
+            padding: 18px 4px;
+            box-shadow: 0 0 1px gray;
+        }
+
+        .item-cont .image {
+            float: left;
+            width: 10em;
+            margin-right: 12px;
+        }
+
+        .product {
+            font-size: 15px;
+            opacity: .9;
+            margin: 5px;
+
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+        }
+
+        .image img {
+            height: 10.3em;
+            width: 100%;
+        }
+
+        .delivery {
+            font-size: 15px;
+            margin-top: 5px;
+        }
+
+        .items #remove {
+            background-color: green;
+            color: #fff;
+            font-size: 15px;
+            padding: 6px;
+            margin-top: 17px;
+            width: 100px;
+            border: none;
+        }
+
+        #remove:hover {
+            background-color: red;
+        }
+
+
+        .order-cont {
+            max-width: 25em;
+            width: 22em;
+            height: 15em;
+            margin-left: 10px;
+            padding: 20px;
+            font-size: 17px;
+            box-shadow: 0 0 1px gray;
+        }
+
+        .mrp-cont {
+            line-height: 2;
+            margin-top: 10px;
+        }
+
+        /*mrp container flex span*/
+        .d {
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+        }
+
+        .discount-mrp span:last-child {
+            color: green;
+            font-weight: bold;
+        }
+
+        .total-amt {
+            margin-top: 8px;
+            font-weight: bold;
+        }
+
+        .line {
+            width: 100%;
+            height: 2px;
+            margin: 5px 0;
+            background-color: rgb(56, 56, 56);
+        }
+
+        #place-order {
+            width: 100%;
+            background-color: rgb(255, 234, 6);
+            font-size: large;
+            padding: 5px;
+            margin-top: 3em;
+            border: 1px solid orange;
+        }
+
+
+        @media (max-width: 600px) {
+            .main {
+                flex-direction: column;
+                grid-gap: 10px;
+            }
+
+            .item-cont {
+                max-width: 80vw;
+            }
+
+            .order-cont {
+                max-width: 80vw;
+                margin-left: 0;
+            }
+
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="navbar">
+       
+        <a href="amazon.html">
+            <div class="logo "></div>
+        </a>
+
+        <!-- box2 -->
+        <div class="location border">
+            <p>Deliver to</p>
+            <div class="location-logo">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>India</span>
+            </div>
+        </div>
+        <!-- box3 -->
+        <div class="search-box">
+            <select class="select">
+                <option>All</option>
+            </select>
+
+            <input class='input' type="text" placeholder="Search Amazon">
+
+            <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+
+        <!-- box4  -->
+        <div class="login-box border">
+            <p class="sign-in"><a href="#">Hello,sign in</a></p>
+            <p class="account"><a href="#">Account & Lists</a></p>
+        </div>
+
+        <!-- box5  -->
+        <div class="login-box border">
+            <p class="sign-in"><a href="#">Returns</a></p>
+            <p class="account"><a href="#">& Orders</a></p>
+        </div>
+
+        <a class="cart border" href="cart.html">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <p>Cart</p>
+            <span id="cart-items"></span>
+        </a>
+
+        <!-- menu bars -->
+        <div class="menu">
+            <div class="bar1 bar"></div>
+            <div class="bar2 bar"></div>
+            <div class="bar3 bar"></div>
+        </div>
+
+        <div class="options">
+            <ul id="menu-ul">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Log-In</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Feedback</a></li>
+                <li><a href="#">Cart</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+   <div class="remove-cart-popup">Removed from Cart</div>
+    
+    <div class="main">
+
+        <div class="item-cont">
+
+            <!-- <div class="items">
+                <div class="image"><img src="samsung.jpg" alt=""></div>
+
+                <h4>Mobiles</h4>
+               
+                <p class="product">Samsung galaxy S20</p>
+                <p class="price">Rs 49999 <span class="actual">Rs 52000</span>
+                    <span class="discount">(65%)</span>
+                </p>
+                <p style="font-size: 14.5px;margin-top:10px;color:green;">7 days return available</p>
+                <p class="delivery">delivery by <span style="color:green;">10 nov 2023</span></p>
+                <button id="remove">Remove</button>
+            </div> -->
+
+        </div>
+
+        <div class="order-cont">
+            <p>price details(0 items)</p>
+
+            <div class="mrp-cont">
+                <div class="d total-mrp">
+                    <span>Total MRP</span>
+                    <span>₹ 0</span>
+                </div>
+
+                <div class="d discount-mrp">
+                    <span>Discount</span>
+                    <span>₹ - 0</span>
+                </div>
+                <div class="d delv-charges">
+                    <span>Delivery charge</span>
+                    <span>₹ 0</span>
+                </div>
+                <div class="line"></div>
+                <div class="d total-amt">
+                    <span>Total Amount</span>
+                    <span>₹ 0</span>
+                </div>
+                <button id="place-order">Place Order</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="amazon.js"></script>
+    <script src="cart.js"></script>
+</body>
+
+</html>
