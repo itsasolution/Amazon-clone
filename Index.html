@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon.com</title>
+
+    <!-- fontawesome library for icons cdnjs  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+
+        <div class="navbar">
+            <a href="Index.html">
+                <div class="logo"></div>
+            </a>
+
+            <!-- box2 -->
+            <div class="location border">
+                <p>Deliver to</p>
+                <div class="location-logo">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>India</span>
+                </div>
+            </div>
+            <!-- box3 -->
+            <div class="search-box">
+                <select class="select">
+                    <option>All</option>
+                </select>
+
+                <input class='input' type="text" placeholder="Search Amazon">
+
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <!-- box4  -->
+            <div class="login-box border">
+                <p class="sign-in"><a href="#">Hello,sign in</a></p>
+                <p class="account"><a href="#">Account & Lists</a></p>
+            </div>
+
+            <!-- box5  -->
+            <div class="login-box border">
+                <p class="sign-in"><a href="#">Returns</a></p>
+                <p class="account"><a href="#">& Orders</a></p>
+            </div>
+
+            <a class="cart border" href="cart.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p>Cart</p>
+                <span id="cart-items"></span>
+            </a>
+
+            <!-- menu bars -->
+            <div class="menu" style="cursor: pointer;">
+                <div class="bar1 bar"></div>
+                <div class="bar2 bar"></div>
+                <div class="bar3 bar"></div>
+            </div>
+
+            <div class="options">
+                <ul id="menu-ul">
+                    <li><a href="Index.html">
+                            <i class="fa-solid fa-home"></i>
+                            Home
+                        </a></li>
+                    <li><a href="cart.html">
+                            <i class="fa-solid fa-cart-shopping" style="position: relative;">
+                                <span class="side-cart"><span>
+                            </i>
+                            Cart
+                        </a></li>
+                    <li><a href="#">
+                            <i class="fa-solid fa-user"></i>
+                            Log-In
+                        </a></li>
+                    <li><a href="#">
+                            <i class="fa-solid fa-magnifying-glass" style="margin-right: 7px;"></i>
+                            Contact </a></li>
+                    <li><a href="#">
+                            <i class="fa-solid fa-question" style="font-size: 20px;"></i>
+                            Help
+                        </a></li>
+                    <li><a href="#">
+                            <i class="fa-solid fa-laptop" style="margin-right: auto;"></i>
+                            Feedback
+                        </a></li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <!-- panel -->
+        <div class="panel">
+            <div class="menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <span>All</span>
+
+            <div class="panel-optn">
+                <p class="border">Today's Deals </p>
+                <p class="border">Customer Service</p>
+                <p class="border">Registry</p>
+                <p class="border">Gift Cards</p>
+                <p class="border">Sell</p>
+            </div>
+        </div>
+
+        <!-- hero image -->
+        <div class="hero-cont">
+            <div class="hero"></div>
+        </div>
+
+        <!-- ITEMS Container -->
+        <div class="shop-cards">
+
+            <div class="box ">
+                <h3>Home & Kitchen Under $30</h3>
+                <div class="img" style="background-image:url('images/box1_image.jpg') "></div>
+                <p><a href="#">see more</a></p>
+
+            </div>
+
+            <div class="box ">
+                <h3>Essentials under $50</h3>
+                <div class="img" style="background-image:url('images/card.jpg') ;"></div>
+                <p><a href="#">see more</a></p>
+            </div>
+
+            <div class="box ani">
+                <h3>Decorate Your House $30</h3>
+                <div class="img" style="background-image:url('images/box2_image.jpg') ;"></div>
+                <p><a href="#">see more</a></p>
+            </div>
+
+            <div class="box ">
+                <h3>Special Offers </h3>
+                <div class="img" style="background-image:url('images/box3_image.jpg') ;"></div>
+                <p><a href="#">see more</a></p>
+            </div>
+
+        </div>
+
+        <!-- shopping items -->
+        <div class="shop">
+            <div class="purchase">
+                <a href="page.html">
+                    <div class="img"><img src="images/box1_image.jpg" alt=""></div>
+                </a>
+                <div class="pur-cont">
+                    <p class="rat">4.5⭐</p>
+                    <h4>Mobiles</h4>
+                    <p class="desc">Samsung galaxy S20</p>
+                    <p class="price">Rs 49999 <span class="actual">Rs 52000</span>
+                        <span class="discount">(65%)</span>
+                    </p>
+                    <button>Add To Bag</button>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- scroll container -->
+
+    <div class="scroll-head">Explore New Thing</div>
+
+    <div class="scroll-cont">
+        <div class="cards">
+            <h2>let's do this</h3>
+                <img src="images/box8_image.jpg" alt="">
+                <a href="#">see more</a>
+        </div>
+        <div class="cards">
+            <h2>let's do this</h3>
+                <img src="images/box6_image.jpg" alt="">
+                <a href="#">see more</a>
+        </div>
+        <div class="cards">
+            <h2>let's do this</h3>
+                <img src="images/box7_image.jpg" alt="">
+                <a href="#">see more</a>
+        </div>
+        <div class="cards">
+            <h2>let's do this</h3>
+                <img src="images/card.jpg" alt="">
+                <a href="#">see more</a>
+        </div>
+        <div class="cards">
+            <h2>let's do this</h3>
+                <img src="images/box3_image.jpg" alt="">
+                <a href="#">see more</a>
+        </div>
+        <div class="cards">
+            <h2>let's do this</h3>
+                <img src="images/box2_image.jpg" alt="">
+                <a href="#">see more</a>
+        </div>
+        <div class="cards">
+            <h2>let's do this</h3>
+                <div class="img">
+                    <img src="images/box5_image.jpg" alt="">
+                </div>
+                <a href="#">see more</a>
+        </div>
+
+
+    </div>
+
+    <footer>
+
+        <div class="back"><a href="#">Back to top</a> </div>
+
+        <div class="foot2">
+            <ul>
+                <h3>Get to Know Us</h3>
+                <a href="#">Careers</a>
+                <a href="#">Blog</a>
+                <a href="#">About Amazon</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Amazon Devices</a>
+                <a href="#"> Amazon Science</a>
+            </ul>
+            <ul>
+                <h3>Get to Know Us</h3>
+                <a href="#">Careers</a>
+                <a href="#">Blog</a>
+                <a href="#">About Amazon</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Amazon Devices</a>
+                <a href="#"> Amazon Science</a>
+            </ul>
+            <ul>
+                <h3>Get to Know Us</h3>
+                <a href="#">Careers</a>
+                <a href="#">Blog</a>
+                <a href="#">About Amazon</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Amazon Devices</a>
+                <a href="#"> Amazon Science</a>
+            </ul>
+            <ul>
+                <h3>Get to Know Us</h3>
+                <a href="#">Careers</a>
+                <a href="#">Blog</a>
+                <a href="#">About Amazon</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Amazon Devices</a>
+                <a href="#"> Amazon Science</a>
+            </ul>
+
+        </div>
+
+        <div class="foot3">
+            <div class="flogo"> </div>
+        </div>
+
+        <div class="foot4">
+            <div class="copyright">Conditions of Use Privacy Notice Your Ads Privacy Choices</div>
+            <div class="privacy">© 1996-2023, Amazon.com, Inc. or its affiliates</div>
+        </div>
+    </footer>
+
+
+    <!-- item added to cart pop-up -->
+    <p class="add-cart-popup">Item Added to Cart</p>
+
+    <script src="amazon.js"></script>
+
+
+
+</body>
+
+</html>
