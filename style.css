@@ -212,8 +212,8 @@ body::-webkit-scrollbar-thumb {
 /* hero section */
 .hero {
   height: 450px;
-  background-image: url("images/Hero_img.jpg");
   background-image: url("images/Hero_image.jpg");
+  background-image: url("images/Hero_img.jpg");
   background-size: cover;
   background-position: center;
   width: 100%;
